@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-08 14:37:41",
+  "timestamp": "2026-01-08 14:51:15",
   "models": [
     "kyutai-stt-pytorch-stt-2.6b-en",
     "whisperkit-large-v3-v20240930/turbo",
@@ -7010,7 +7010,7 @@
           "wer": 0.10430170889805539,
           "reference_words": 1697,
           "hypothesis_words": 1639,
-          "transcription_duration": 40.15473008155823
+          "transcription_duration": null
         },
         "google-medasr": {
           "wer": 0.6328815556865056,
@@ -7174,9 +7174,9 @@
           "transcription_duration": 107.44221520423889
         },
         "speechmatics-enhanced": {
-          "wer": null,
-          "reference_words": null,
-          "hypothesis_words": null,
+          "wer": 0.10017996400719856,
+          "reference_words": 1667,
+          "hypothesis_words": 1621,
           "transcription_duration": null
         },
         "google-medasr": {
@@ -7341,9 +7341,9 @@
           "transcription_duration": 65.51661396026611
         },
         "speechmatics-enhanced": {
-          "wer": null,
-          "reference_words": null,
-          "hypothesis_words": null,
+          "wer": 0.09742351046698873,
+          "reference_words": 1242,
+          "hypothesis_words": 1216,
           "transcription_duration": null
         },
         "google-medasr": {
@@ -7508,9 +7508,9 @@
           "transcription_duration": 64.69187355041504
         },
         "speechmatics-enhanced": {
-          "wer": null,
-          "reference_words": null,
-          "hypothesis_words": null,
+          "wer": 0.08133086876155268,
+          "reference_words": 1082,
+          "hypothesis_words": 1065,
           "transcription_duration": null
         },
         "google-medasr": {
@@ -7675,9 +7675,9 @@
           "transcription_duration": 111.53079462051392
         },
         "speechmatics-enhanced": {
-          "wer": null,
-          "reference_words": null,
-          "hypothesis_words": null,
+          "wer": 0.07797427652733119,
+          "reference_words": 2488,
+          "hypothesis_words": 2396,
           "transcription_duration": null
         },
         "google-medasr": {
@@ -7842,9 +7842,9 @@
           "transcription_duration": 78.52373337745667
         },
         "speechmatics-enhanced": {
-          "wer": null,
-          "reference_words": null,
-          "hypothesis_words": null,
+          "wer": 0.18360914105594955,
+          "reference_words": 1269,
+          "hypothesis_words": 1265,
           "transcription_duration": null
         },
         "google-medasr": {
@@ -8009,9 +8009,9 @@
           "transcription_duration": 59.19372487068176
         },
         "speechmatics-enhanced": {
-          "wer": null,
-          "reference_words": null,
-          "hypothesis_words": null,
+          "wer": 0.12985571587125416,
+          "reference_words": 901,
+          "hypothesis_words": 891,
           "transcription_duration": null
         },
         "google-medasr": {
@@ -8176,9 +8176,9 @@
           "transcription_duration": 88.78389525413513
         },
         "speechmatics-enhanced": {
-          "wer": null,
-          "reference_words": null,
-          "hypothesis_words": null,
+          "wer": 0.10516002612671456,
+          "reference_words": 1531,
+          "hypothesis_words": 1506,
           "transcription_duration": null
         },
         "google-medasr": {
@@ -8343,9 +8343,9 @@
           "transcription_duration": 70.95466494560242
         },
         "speechmatics-enhanced": {
-          "wer": null,
-          "reference_words": null,
-          "hypothesis_words": null,
+          "wer": 0.0940032414910859,
+          "reference_words": 1234,
+          "hypothesis_words": 1220,
           "transcription_duration": null
         },
         "google-medasr": {
@@ -8510,9 +8510,9 @@
           "transcription_duration": 81.63264560699463
         },
         "speechmatics-enhanced": {
-          "wer": null,
-          "reference_words": null,
-          "hypothesis_words": null,
+          "wer": 0.06608969315499606,
+          "reference_words": 1271,
+          "hypothesis_words": 1270,
           "transcription_duration": null
         },
         "google-medasr": {
@@ -8677,9 +8677,9 @@
           "transcription_duration": 83.75530123710632
         },
         "speechmatics-enhanced": {
-          "wer": null,
-          "reference_words": null,
-          "hypothesis_words": null,
+          "wer": 0.11656891495601172,
+          "reference_words": 1364,
+          "hypothesis_words": 1335,
           "transcription_duration": null
         },
         "google-medasr": {
@@ -8844,9 +8844,9 @@
           "transcription_duration": 84.91849327087402
         },
         "speechmatics-enhanced": {
-          "wer": null,
-          "reference_words": null,
-          "hypothesis_words": null,
+          "wer": 0.10194805194805195,
+          "reference_words": 1540,
+          "hypothesis_words": 1510,
           "transcription_duration": null
         },
         "google-medasr": {
@@ -9011,9 +9011,9 @@
           "transcription_duration": 96.11204814910889
         },
         "speechmatics-enhanced": {
-          "wer": null,
-          "reference_words": null,
-          "hypothesis_words": null,
+          "wer": 0.07765531062124248,
+          "reference_words": 1996,
+          "hypothesis_words": 1953,
           "transcription_duration": null
         },
         "google-medasr": {
@@ -9178,10 +9178,10 @@
           "transcription_duration": 47.11130714416504
         },
         "speechmatics-enhanced": {
-          "wer": null,
-          "reference_words": null,
-          "hypothesis_words": null,
-          "transcription_duration": null
+          "wer": 0.07888040712468193,
+          "reference_words": 786,
+          "hypothesis_words": 769,
+          "transcription_duration": 23.472748041152954
         },
         "google-medasr": {
           "wer": 0.6755725190839694,

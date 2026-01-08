@@ -35,6 +35,17 @@
     },
     {
       "rank": 3,
+      "name": "speechmatics-enhanced",
+      "wer": 0.1166,
+      "accuracy": 0.8834,
+      "avg_speed_sec": 23.5,
+      "best_wer": 0.0661,
+      "worst_wer": 0.1836,
+      "wer_std": 0.0269,
+      "files_evaluated": 55
+    },
+    {
+      "rank": 4,
       "name": "parakeet-parakeet-tdt-0.6b-v3",
       "wer": 0.119,
       "accuracy": 0.881,
@@ -45,7 +56,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 4,
+      "rank": 5,
       "name": "google-gemini-2.5-flash",
       "wer": 0.1208,
       "accuracy": 0.8792,
@@ -54,18 +65,6 @@
       "worst_wer": 0.3745,
       "wer_std": 0.0453,
       "files_evaluated": 55
-    },
-    {
-      "rank": 5,
-      "name": "speechmatics-enhanced",
-      "wer": 0.1215,
-      "accuracy": 0.8785,
-      "avg_speed_sec": 40.2,
-      "best_wer": 0.0704,
-      "worst_wer": 0.1702,
-      "wer_std": 0.024,
-      "files_evaluated": 42,
-      "note": "*42/55 files evaluated"
     },
     {
       "rank": 6,
