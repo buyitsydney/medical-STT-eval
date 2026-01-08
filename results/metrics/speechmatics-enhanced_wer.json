@@ -1,0 +1,41 @@
+{
+  "model_name": "speechmatics-enhanced",
+  "timestamp": "2026-01-08 13:27:58",
+  "normalization": "Whisper EnglishTextNormalizer",
+  "wer_metrics": {
+    "average_wer": 0.1346013167520117,
+    "median_wer": 0.1346013167520117,
+    "best_wer": 0.1346013167520117,
+    "worst_wer": 0.1346013167520117,
+    "wer_std": 0.0
+  },
+  "word_statistics": {
+    "total_reference_words": 1367,
+    "total_hypothesis_words": 1326,
+    "total_correct_words": 1224,
+    "total_substitutions": 61,
+    "total_deletions": 82,
+    "total_insertions": 41,
+    "word_accuracy": 0.8953913679590344
+  },
+  "file_count": 1,
+  "speed_metrics": {
+    "total_files": 1,
+    "total_duration": 43.39306688308716,
+    "average_duration": 43.39306688308716,
+    "fastest_file": 43.39306688308716,
+    "slowest_file": 43.39306688308716
+  },
+  "file_details": [
+    {
+      "file": "day1_consultation01_conversation_transcript.txt",
+      "wer": 0.1346013167520117,
+      "reference_words": 1367,
+      "hypothesis_words": 1326,
+      "substitutions": 61,
+      "deletions": 82,
+      "insertions": 41,
+      "transcription_duration": 43.39306688308716
+    }
+  ]
+}

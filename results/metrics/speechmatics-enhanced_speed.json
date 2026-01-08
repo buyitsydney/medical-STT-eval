@@ -1,0 +1,18 @@
+{
+  "model_name": "speechmatics-enhanced",
+  "timestamp": "2026-01-08 13:27:05",
+  "summary": {
+    "total_files": 1,
+    "total_duration": 43.39306688308716,
+    "average_duration": 43.39306688308716,
+    "fastest_file": 43.39306688308716,
+    "slowest_file": 43.39306688308716
+  },
+  "file_details": [
+    {
+      "audio_file": "day1_consultation01_conversation.wav",
+      "duration": 43.39306688308716,
+      "text_length": 7671
+    }
+  ]
+}
