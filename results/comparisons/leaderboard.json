@@ -57,6 +57,18 @@
     },
     {
       "rank": 5,
+      "name": "speechmatics-enhanced",
+      "wer": 0.1215,
+      "accuracy": 0.8785,
+      "avg_speed_sec": 40.2,
+      "best_wer": 0.0704,
+      "worst_wer": 0.1702,
+      "wer_std": 0.024,
+      "files_evaluated": 42,
+      "note": "*42/55 files evaluated"
+    },
+    {
+      "rank": 6,
       "name": "openai-gpt-4o-mini-transcribe-2025-12-15",
       "wer": 0.1282,
       "accuracy": 0.8718,
@@ -67,7 +79,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 6,
+      "rank": 7,
       "name": "parakeet-parakeet-tdt-0.6b-v2",
       "wer": 0.1326,
       "accuracy": 0.8674,
@@ -76,18 +88,6 @@
       "worst_wer": 0.2017,
       "wer_std": 0.0305,
       "files_evaluated": 55
-    },
-    {
-      "rank": 7,
-      "name": "speechmatics-enhanced",
-      "wer": 0.1346,
-      "accuracy": 0.8654,
-      "avg_speed_sec": 43.4,
-      "best_wer": 0.1346,
-      "worst_wer": 0.1346,
-      "wer_std": 0,
-      "files_evaluated": 1,
-      "note": "*1/55 files evaluated"
     },
     {
       "rank": 8,

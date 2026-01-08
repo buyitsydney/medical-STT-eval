@@ -1,18 +1,18 @@
 {
   "model_name": "speechmatics-enhanced",
-  "timestamp": "2026-01-08 13:27:05",
+  "timestamp": "2026-01-08 14:41:26",
   "summary": {
     "total_files": 1,
-    "total_duration": 43.39306688308716,
-    "average_duration": 43.39306688308716,
-    "fastest_file": 43.39306688308716,
-    "slowest_file": 43.39306688308716
+    "total_duration": 44.40498900413513,
+    "average_duration": 44.40498900413513,
+    "fastest_file": 44.40498900413513,
+    "slowest_file": 44.40498900413513
   },
   "file_details": [
     {
-      "audio_file": "day1_consultation01_conversation.wav",
-      "duration": 43.39306688308716,
-      "text_length": 7671
+      "audio_file": "day5_consultation03_conversation.wav",
+      "duration": 44.40498900413513,
+      "text_length": 12087
     }
   ]
 }
