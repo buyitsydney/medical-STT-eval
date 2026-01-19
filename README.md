@@ -4,14 +4,16 @@ Evaluation framework for speech-to-text models on medical conversation data.
 
 ## Leaderboard
 
-**Dataset**: PriMock57 (55 files, 81,236 words) | **Models**: 26 | **Updated**: 2025-12-24
+**Dataset**: PriMock57 (55 files, 81,236 words) | **Models**: 28 | **Updated**: 2026-01-19
 
 | Rank | Model | WER | Accuracy | Avg Speed | Type |
 |------|-------|-----|----------|-----------|------|
 | 1 | Google Gemini 2.5 Pro | 10.79% | 89.21% | 56.4s | API |
 | 2 | Google Gemini 3 Pro Preview* | 11.03% | 88.97% | 64.5s | API |
-| 3 | Parakeet TDT 0.6B v3 | 11.90% | 88.10% | 6.3s | MLX |
-| 4 | Google Gemini 2.5 Flash | 12.08% | 87.92% | 20.2s | API |
+| 3 | **Speechmatics Enhanced** | **11.66%** | **88.34%** | ~60s | API |
+| 4 | **Speechmatics Enhanced Medical****| **11.67%** | **88.33%** | ~60s | API |
+| 5 | Parakeet TDT 0.6B v3 | 11.90% | 88.10% | 6.3s | MLX |
+| 6 | Google Gemini 2.5 Flash | 12.08% | 87.92% | 20.2s | API |
 | 5 | OpenAI GPT-4o Mini (2025-12-15) | 12.82% | 87.18% | 40.5s | API |
 | 6 | Parakeet TDT 0.6B v2 | 13.26% | 86.74% | 5.4s | MLX |
 | 7 | ElevenLabs Scribe v1 | 13.54% | 86.46% | 36.3s | API |
@@ -38,6 +40,7 @@ Evaluation framework for speech-to-text models on medical conversation data.
 *54/55 files evaluated (1 blocked by safety filter)
 **3 files with hallucination loops (see AGENTS.md for details)
 ***Requires chunking to avoid repetition loops
+****Medical Domain vs Enhanced: Nearly identical WER (0.01% difference). See AGENTS.md for detailed comparison.
 
 ## Quick Start
 

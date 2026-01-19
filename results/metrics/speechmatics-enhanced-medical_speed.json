@@ -1,0 +1,18 @@
+{
+  "model_name": "speechmatics-enhanced-medical",
+  "timestamp": "2026-01-19 13:34:49",
+  "summary": {
+    "total_files": 1,
+    "total_duration": 117.99514412879944,
+    "average_duration": 117.99514412879944,
+    "fastest_file": 117.99514412879944,
+    "slowest_file": 117.99514412879944
+  },
+  "file_details": [
+    {
+      "audio_file": "day5_consultation03_conversation.wav",
+      "duration": 117.99514412879944,
+      "text_length": 12097
+    }
+  ]
+}

@@ -18,10 +18,14 @@ class SpeechmaticsTranscriber(BaseTranscriber):
     
     def __init__(self, 
                  operating_point: str = "enhanced",
+                 domain: str = None,
                  api_key: str = None, 
                  results_dir: str = None):
-        # Model name for results directory
-        display_name = f"speechmatics-{operating_point}"
+        # Model name for results directory (include domain if specified)
+        if domain:
+            display_name = f"speechmatics-{operating_point}-{domain}"
+        else:
+            display_name = f"speechmatics-{operating_point}"
         super().__init__(display_name, results_dir)
         
         self.api_key = api_key or os.getenv('SPEECHMATICS_API_KEY')
@@ -29,6 +33,7 @@ class SpeechmaticsTranscriber(BaseTranscriber):
             raise ValueError("Speechmatics API key required. Set SPEECHMATICS_API_KEY environment variable or pass api_key parameter.")
         
         self.operating_point = operating_point
+        self.domain = domain
         self.base_url = "https://asr.api.speechmatics.com/v2/jobs"
         self.headers = {"Authorization": f"Bearer {self.api_key}"}
     
@@ -49,13 +54,19 @@ class SpeechmaticsTranscriber(BaseTranscriber):
         
         try:
             # 1. Submit transcription job
+            transcription_config = {
+                "language": "en",
+                "operating_point": self.operating_point,
+                "enable_entities": True
+            }
+            
+            # Add domain if specified (e.g., "medical" for healthcare transcription)
+            if self.domain:
+                transcription_config["domain"] = self.domain
+            
             config = {
                 "type": "transcription",
-                "transcription_config": {
-                    "language": "en",
-                    "operating_point": self.operating_point,
-                    "enable_entities": True
-                }
+                "transcription_config": transcription_config
             }
             
             with open(audio_file, 'rb') as f:
@@ -136,6 +147,9 @@ def main():
     parser.add_argument("--operating_point", default="enhanced", 
                        choices=["standard", "enhanced"], 
                        help="Operating point (standard or enhanced)")
+    parser.add_argument("--domain", default=None,
+                       choices=[None, "medical"],
+                       help="Domain-specific model (e.g., 'medical' for healthcare)")
     parser.add_argument("--api_key", help="Speechmatics API key (or set SPEECHMATICS_API_KEY env var)")
     parser.add_argument("--results_dir", default="results", help="Results directory")
     parser.add_argument("--pattern", default="*_conversation.wav", help="Audio file pattern")
@@ -146,6 +160,7 @@ def main():
     try:
         transcriber = SpeechmaticsTranscriber(
             operating_point=args.operating_point,
+            domain=args.domain,
             api_key=args.api_key,
             results_dir=args.results_dir
         )

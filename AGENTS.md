@@ -226,6 +226,54 @@ Cloud APIs generally handle long audio better than local models requiring chunki
 
 ## Model-Specific Learnings
 
+### Speechmatics Enhanced vs Medical Domain (2026-01-19)
+
+**测试目的**: 验证 Speechmatics Medical Domain 模型是否比通用 Enhanced 模型在医疗对话转写上有优势。
+
+**测试配置**:
+- `speechmatics-enhanced`: `operating_point: "enhanced"` (无 domain)
+- `speechmatics-enhanced-medical`: `operating_point: "enhanced"`, `domain: "medical"`
+
+**测试结果** (55 个文件):
+
+| 模型 | 平均 WER | 排名 |
+|------|----------|------|
+| speechmatics-enhanced | 11.66% | #3 |
+| speechmatics-enhanced-medical | 11.67% | #4 |
+| **差异** | **+0.01%** | **几乎相同** |
+
+**文件级别统计**:
+- Medical 更好: 22 个文件 (40.0%)
+- Enhanced 更好: 23 个文件 (41.8%)
+- 基本相同: 10 个文件 (18.2%)
+
+**关键发现**:
+1. **两个模型差异极小**：平均 WER 仅相差 0.01%
+2. **差异主要在标点符号**：如 `", any"` → `". Any"`，而非医疗术语
+3. **医疗术语识别几乎相同**：常见词如 cough, diarrhoea, paracetamol 出现频率一致
+
+**结论**: 对于一般医疗对话（如 OSCE 模拟问诊），**使用 Enhanced (通用) 模型即可**，无需额外付费使用 Medical Domain。Medical Domain 可能在更专业的场景（手术记录、病理报告）有优势。
+
+**测试方法**:
+```bash
+# 1. 修改 speechmatics_transcribe.py 添加 --domain 参数
+python transcribe/speechmatics_transcribe.py --audio_dir data/raw_audio --domain medical
+
+# 2. 生成指标
+python evaluate/metrics_generator.py --model_name speechmatics-enhanced-medical
+
+# 3. 对比两个模型
+# 结果保存在: results/metrics/speechmatics-enhanced-medical_wer.json
+```
+
+**结果文件位置**:
+- `results/transcripts/speechmatics-enhanced/` - 通用模型转写结果
+- `results/transcripts/speechmatics-enhanced-medical/` - 医疗模型转写结果
+- `results/metrics/speechmatics-enhanced_wer.json` - 通用模型 WER
+- `results/metrics/speechmatics-enhanced-medical_wer.json` - 医疗模型 WER
+
+---
+
 ### NVIDIA Canary 1B v2 (nvidia/canary-1b-v2)
 - **WER**: 16.80% average | **Speed**: 9.17s avg per file
 - **Key Feature**: Native long-form dynamic chunking (automatic for files >40s)
